@@ -1,16 +1,121 @@
+/* Estilo base para todos los dispositivos */
 body {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.botonesT {
-    width: 7%;
+    flex-direction: column; /* Coloca los elementos en columna */
+    margin: 0;
+    min-height: 100vh; /* Asegura que el contenido llene la pantalla */
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black; /* Fondo negro */
+    color: white; /* Color del texto blanco */
+    font-family: 'Roboto', sans-serif; /* Aplicar la nueva fuente */
 }
 
 .container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column; /* Coloca los elementos en columna */
+    justify-content: flex-start; /* Alinea los elementos al inicio (arriba) */
     align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Título h1 */
+h1 {
+    margin: 20px 0; /* Espacio alrededor del título */
+    font-family: 'Permanent Marker', cursive; /* Cambiar la fuente a estilo grafiti */
+    font-size: 3rem; /* Aumentar el tamaño del texto del h1 */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Parte del título "PokeRuleta" */
+.titulo {
+    display: inline; /* Mantener en línea con el siguiente elemento */
+}
+
+/* Parte del título "VESTA" */
+.subtitulo {
+    display: inline; /* Mantener en línea con el anterior */
+    margin-left: 5px; /* Espacio mínimo entre las palabras en PC */
+}
+
+/* Contenedor para los botones */
+.botones-container {
+    display: flex;
+    flex-direction: column; /* Coloca los botones en columna */
+    align-items: center; /* Centra los botones horizontalmente */
+    width: 100%; /* Ocupará todo el ancho */
+    margin-bottom: 20px; /* Espacio entre botones y el histórico */
+}
+
+.botonesT {
+    width: 25%; /* Menos ancho en PC */
+    padding: 10px 20px; /* Ajusta el espaciado interno */
+    font-size: 1.5rem; /* Aumentar el tamaño del texto */
+    font-weight: bold; /* Hacer el texto más grueso */
+    margin: 10px 0; /* Espaciado entre los botones */
+    background-color: #33cccc; /* Color del botón */
+    color: white; /* Color del texto en los botones */
+    border: 2px solid black; /* Borde sólido alrededor del botón */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease; /* Transición para efectos suaves */
+    box-shadow: 0 4px 10px rgba(51, 204, 204, 0.5); /* Sombra más notable */
+    -webkit-text-stroke: 1px black; /* Borde sólido negro alrededor del texto */
+}
+
+.botonesT:hover {
+    background-color: #2bb3b3; /* Cambio de color al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(51, 204, 204, 0.7); /* Sombra más pronunciada en hover */
+}
+
+.botonesT:active {
+    box-shadow: 0 2px 4px rgba(51, 204, 204, 0.7); /* Sombra más pequeña al hacer clic */
+    transform: translateY(2px); /* Efecto de "presionado" */
+}
+
+/* Contenedor para el histórico */
+.historial {
+    display: flex;
+    flex-direction: column; /* Los elementos del historial se apilan */
+    align-items: center; /* Centra los elementos horizontalmente */
+    width: 100%; /* Ocupará todo el ancho */
+    overflow-y: auto; /* Habilita el desplazamiento vertical si es necesario */
+    max-height: 60vh; /* Ajusta la altura máxima según sea necesario */
+}
+
+/* Estilos específicos para pantallas más pequeñas como teléfonos */
+@media only screen and (max-width: 768px) {
+    .botonesT {
+        width: 60%; /* Botones más grandes en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Ajustar el tamaño del h1 para dispositivos móviles */
+        text-align: center; /* Asegura que el texto esté centrado */
+    }
+
+    #vesta{
+        margin-top: -100px;
+        padding-top: 20px;
+    }
+
+    /* Cambiar a un formato de dos líneas para móviles */
+    .titulo {
+        display: block; /* Hacer que "PokeRuleta" ocupe toda la línea */
+        margin-bottom: 2px; /* Espacio reducido entre "PokeRuleta" y "VESTA" */
+    }
+
+    .subtitulo {
+        display: block; /* Hacer que "VESTA" ocupe su propia línea */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .botonesT {
+        width: 80%; /* Botones casi del ancho completo en teléfonos */
+        font-size: 1.2rem; /* Ajusta el tamaño del texto */
+        padding: 12px; /* Más espacio para facilitar el toque */
+    }
 }
