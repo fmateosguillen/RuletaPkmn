@@ -53,7 +53,7 @@ h1 {
     width: 25%; /* Menos ancho en PC */
     padding: 10px 20px; /* Ajusta el espaciado interno */
     font-size: 1.5rem; /* Aumentar el tamaño del texto */
-    font-weight: bold; /* Hacer el texto más grueso */
+    font-weight: 900; /* Hacer el texto más grueso */
     margin: 10px 0; /* Espaciado entre los botones */
     background-color: #33cccc; /* Color del botón */
     color: white; /* Color del texto en los botones */
@@ -96,7 +96,7 @@ h1 {
         text-align: center; /* Asegura que el texto esté centrado */
     }
 
-    #vesta{
+    #Vesta{
         margin-top: -100px;
         padding-top: 20px;
     }
