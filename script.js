@@ -16,10 +16,17 @@ function realizarTirada(nombre) {
     // Mostrar el resultado
     document.getElementById('resultado').textContent = `El número seleccionado por ${nombre} es: ${resultado}`;
 
-    // Añadir el resultado al historial
+    // Obtener la hora actual en España (UTC+2 en horario de verano)
+    const fecha = new Date();
+    // Convertir a hora local y formatear
+    const options = { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', second: '2-digit', fractionalSecondDigits: 3 };
+    const hora = new Intl.DateTimeFormat('es-ES', options).format(fecha);
+
+    // Añadir el resultado y la hora al historial
     const listaHistorico = document.getElementById('lista-historico');
     const nuevoElemento = document.createElement('li');
-    nuevoElemento.textContent = `Tirada de ${nombre}: ${resultado}`;
+    nuevoElemento.innerHTML = `Tirada de ${nombre}: ${resultado} <span class="hora">${hora}</span>`; // Agregar la hora
+
     listaHistorico.appendChild(nuevoElemento);
 }
 

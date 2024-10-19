@@ -11,6 +11,12 @@ body {
     font-family: 'Roboto', sans-serif; /* Aplicar la nueva fuente */
 }
 
+.hora {
+    font-size: 0.9rem; /* Ajustar el tamaño de la hora */
+    color: #aaa; /* Color más tenue para la hora */
+    margin-left: 10px; /* Espacio entre el resultado y la hora */
+}
+
 .container {
     display: flex;
     flex-direction: column; /* Coloca los elementos en columna */
