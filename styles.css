@@ -95,6 +95,7 @@ h1 {
 @media only screen and (max-width: 768px) {
     .botonesT {
         width: 60%; /* Botones más grandes en pantallas pequeñas */
+        font-weight: 900;
     }
 
     h1 {
@@ -120,6 +121,7 @@ h1 {
 
 @media only screen and (max-width: 480px) {
     .botonesT {
+        font-weight: 900;
         width: 80%; /* Botones casi del ancho completo en teléfonos */
         font-size: 1.2rem; /* Ajusta el tamaño del texto */
         padding: 12px; /* Más espacio para facilitar el toque */
